@@ -222,7 +222,7 @@ class Calculator(Frame):
                     self.calculation = self.calculation[:-1]
                 try:
                     self.number = str(eval(self.calculation))
-                except IndexError:
+                except IndexError and ZeroDivisionError:
                     self.number = "0"
                 self.calculation = ""
                 self.test = True
